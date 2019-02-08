@@ -1,0 +1,13 @@
+com\vsc\flightreservation\repos\UserRepository.class
+com\vsc\flightreservation\controllers\ReservationController.class
+com\vsc\flightreservation\repos\FlightRepository.class
+com\vsc\flightreservation\pojos\Passenger.class
+com\vsc\flightreservation\controllers\UserController.class
+com\vsc\flightreservation\pojos\User.class
+com\vsc\flightreservation\repos\PassengerRepository.class
+com\vsc\flightreservation\pojos\Flight.class
+com\vsc\flightreservation\pojos\Reservation.class
+com\vsc\flightreservation\FlightReservationProjectApplication.class
+com\vsc\flightreservation\controllers\FlightController.class
+com\vsc\flightreservation\repos\ReservationRepository.class
+com\vsc\flightreservation\pojos\AbstractEntity.class
