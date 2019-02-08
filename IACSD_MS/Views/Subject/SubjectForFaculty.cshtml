@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BOL.Subject>
+
+<h3 align="right"><a href="/Admin/Logout">LOGOUT</a></h3>
+<h1 align="center" style="color:blueviolet;border:groove">Subject Details</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectReferences)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectReferences)
+            </td>
+
+        </tr>
+    }
+
+</table>
+

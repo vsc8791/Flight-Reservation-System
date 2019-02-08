@@ -1,0 +1,69 @@
+﻿@model IEnumerable<BOL.Schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h3 align="right"><a href="/Admin/Logout">LOGOUT</a></h3>
+<h1 align="center" style="color:darkmagenta"><u>SCHEDULE LIST</u></h1><hr>
+
+<h4 align="right">
+    @Html.ActionLink("Enter New Schedule", "Create")
+</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacultyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Timing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Venue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfLec)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BatchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacultyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Timing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfLec)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ScheduleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ScheduleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ScheduleId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,90 @@
+﻿@model BOL.Result
+
+@{
+    ViewBag.Title = "Details";
+}
+<h3 align="right"><a href="/Admin/Logout">LOGOUT</a></h3>
+<h1 align="center" style="color:blueviolet;border:groove">Result Details</h1>
+
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BatchName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRNNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRNNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfExam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfExam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassLabType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassLabType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResultId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

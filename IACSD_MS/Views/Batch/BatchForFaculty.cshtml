@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BOL.Batch>
+
+<h3 align="right"><a href="/Admin/Logout">LOGOUT</a></h3>
+<table></table>
+
+<h1 align="center" style="color:blueviolet;border:groove">BATCH DETAILS</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchNOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchProgress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseOffered)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchNOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchDuration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchProgress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseOffered)
+            </td>
+
+        </tr>
+    }
+
+</table>

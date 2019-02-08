@@ -1,0 +1,69 @@
+﻿@model IEnumerable<BOL.Result>
+
+@{
+    ViewBag.Title = "ResultForAllStudent";
+}
+<h3 align="right"><a href="/Admin/Logout">LOGOUT</a></h3>
+<h1 align="center" style="color:blueviolet;border:groove">Result Details</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRNNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfExam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResultType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassLabType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BatchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRNNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfExam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResultType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassLabType)
+        </td>
+       
+    </tr>
+}
+
+</table>
