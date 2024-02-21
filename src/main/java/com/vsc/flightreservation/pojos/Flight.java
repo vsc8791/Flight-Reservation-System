@@ -10,32 +10,30 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="Flight")
+@Table(name = "Flight")
 public class Flight extends AbstractEntity {
-	
 
-	@Column(name="Flight_Number")
+	@Column(name = "Flight_Number")
 	private String flightNumber;
-	
-	@Column(name="Operating_Airlines")
+
+	@Column(name = "Operating_Airlines")
 	private String operatingAirlines;
-	
-	@Column(name="Depature_City")
+
+	@Column(name = "Depature_City")
 	private String departureCity;
-	
-	@Column(name="Arrival_City")
+
+	@Column(name = "Arrival_City")
 	private String arrivalCity;
-	
-	@Column(name="Date_Of_Departure")
-	@DateTimeFormat(pattern ="MM-dd-yyyy")
+
+	@Column(name = "Date_Of_Departure")
+	@DateTimeFormat(pattern = "MM-dd-yyyy")
 	private Date dateOfDeparture;
-	
-	@Column(name="Estimated_Departure_Time")
+
+	@Column(name = "Estimated_Departure_Time")
 	private Timestamp estimatedDepartureTime;
-	
+
 	public Flight() {
-		
-		
+
 	}
 
 	public String getFlightNumber() {
@@ -84,6 +82,13 @@ public class Flight extends AbstractEntity {
 
 	public void setEstimatedDepartureTime(Timestamp estimatedDepartureTime) {
 		this.estimatedDepartureTime = estimatedDepartureTime;
+	}
+
+	@Override
+	public String toString() {
+		return "Flight [flightNumber=" + flightNumber + ", operatingAirlines=" + operatingAirlines + ", departureCity="
+				+ departureCity + ", arrivalCity=" + arrivalCity + ", dateOfDeparture=" + dateOfDeparture
+				+ ", estimatedDepartureTime=" + estimatedDepartureTime + "]";
 	}
 
 }
