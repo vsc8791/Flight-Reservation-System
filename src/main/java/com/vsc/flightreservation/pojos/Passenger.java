@@ -8,6 +8,12 @@ import javax.persistence.Table;
 @Table(name="Passenger")
 public class Passenger extends AbstractEntity {
 
+	@Override
+	public String toString() {
+		return "Passenger [firstName=" + firstName + ", lastName=" + lastName + ", middleName=" + middleName
+				+ ", email=" + email + ", phone=" + phone + "]";
+	}
+
 	@Column(name="First_Name")
 	private String firstName;
 	
